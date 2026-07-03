@@ -80,7 +80,10 @@ struct DiaryContentView: View {
     @Query private var entries: [FoodEntry]
     @Query private var profiles: [UserProfile]
 
+    private let date: Date
+
     init(date: Date) {
+        self.date = date
         let start = Calendar.current.startOfDay(for: date)
         let end = Calendar.current.date(byAdding: .day, value: 1, to: start)!
         _entries = Query(
@@ -100,6 +103,12 @@ struct DiaryContentView: View {
         List {
             Section {
                 summaryCard
+                    .listRowInsets(EdgeInsets())
+                    .listRowBackground(Color.clear)
+            }
+
+            Section {
+                WaterTrackerCard(date: date)
                     .listRowInsets(EdgeInsets())
                     .listRowBackground(Color.clear)
             }
@@ -151,5 +160,5 @@ struct DiaryContentView: View {
 
 #Preview {
     DiaryView()
-        .modelContainer(for: [FoodEntry.self, UserProfile.self], inMemory: true)
+        .modelContainer(for: [FoodEntry.self, UserProfile.self, WaterDay.self], inMemory: true)
 }

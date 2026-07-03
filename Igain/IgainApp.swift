@@ -14,7 +14,7 @@ struct IgainApp: App {
         WindowGroup {
             RootView()
         }
-        .modelContainer(for: [FoodEntry.self, UserProfile.self])
+        .modelContainer(for: [FoodEntry.self, UserProfile.self, WaterDay.self])
     }
 }
 

@@ -18,6 +18,9 @@ enum Theme {
     static let calorieRing = accent
     static let burned = Color(red: 0.35, green: 0.56, blue: 0.94)
 
+    /// Water tracker blue.
+    static let water = Color(red: 0.20, green: 0.62, blue: 0.90)
+
     static let background = Color(.systemGroupedBackground)
     static let card = Color(.secondarySystemGroupedBackground)
 
