@@ -81,6 +81,11 @@ Igain/
 - Xcode 16+
 - A Gemini API key (free tier works) for the AI meal scanner — everything else works without it
 
+## 👥 Authors
+
+**Neil Alvin Medallon** — [@NeilAlvn](https://github.com/NeilAlvn)
+**Vince Daniel Tamis**
+
 ---
 
 Built with ❤️ and SwiftUI. 🤖 Developed with [Claude Code](https://claude.com/claude-code).
