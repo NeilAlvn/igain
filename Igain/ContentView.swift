@@ -8,18 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab: String = {
+        #if DEBUG
+        DemoSeeder.initialTab ?? "diary"
+        #else
+        "diary"
+        #endif
+    }()
+
     var body: some View {
-        TabView {
-            Tab("Diary", systemImage: "book.fill") {
+        TabView(selection: $selectedTab) {
+            Tab("Diary", systemImage: "book.fill", value: "diary") {
                 DiaryView()
             }
-            Tab("Scan", systemImage: "camera.viewfinder") {
+            Tab("Scan", systemImage: "camera.viewfinder", value: "scan") {
                 ScanView()
             }
-            Tab("Foods", systemImage: "magnifyingglass") {
+            Tab("Foods", systemImage: "magnifyingglass", value: "foods") {
                 FoodsView()
             }
-            Tab("Settings", systemImage: "gearshape.fill") {
+            Tab("Settings", systemImage: "gearshape.fill", value: "settings") {
                 SettingsView()
             }
         }

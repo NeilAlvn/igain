@@ -13,6 +13,14 @@ A Cronometer-inspired calorie & macro tracker built entirely with SwiftUI. Log f
 
 ---
 
+## 📷 Screenshots
+
+| Diary | AI Scanner | Foods | Settings |
+|:---:|:---:|:---:|:---:|
+| ![Diary — calorie ring, macros & water cups](Screenshots/diary.png) | ![AI meal scanner](Screenshots/scan.png) | ![Food search & recent foods](Screenshots/foods.png) | ![Settings & targets](Screenshots/settings.png) |
+
+---
+
 ## ✨ Features
 
 - 📸 **AI Meal Scanner** — take a photo of your meal and Gemini 2.5 Flash identifies each food item and estimates calories & macros; review and edit before logging
