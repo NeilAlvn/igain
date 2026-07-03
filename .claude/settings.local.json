@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild -project Igain.xcodeproj -scheme Igain -destination 'generic/platform=iOS Simulator' build)",
+      "Bash(mdfind \"kMDItemCFBundleIdentifier == 'com.apple.dt.Xcode'\")",
+      "Read(//Users/neilalvinmedallon/Applications/**)",
+      "Bash(export DEVELOPER_DIR=/Users/neilalvinmedallon/Downloads/Xcode.app/Contents/Developer)",
+      "Bash(plutil -p /Users/neilalvinmedallon/Library/Developer/Xcode/DerivedData/Igain-fksangxuflrkpyerqajbgobskkyq/Build/Products/Debug-iphonesimulator/Igain.app/Info.plist)",
+      "Bash(xcrun devicectl *)",
+      "Bash(xcodebuild -project Igain.xcodeproj -scheme Igain -destination 'platform=iOS,id=00008020-001C78A23CB9002E' -allowProvisioningUpdates build)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
